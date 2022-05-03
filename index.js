@@ -1,9 +1,10 @@
-let turnoCli = 0
-let turnoOdo = 0
-let turnoCar = 0
+let turnoCli = []
+let turnoOdo = []
+let turnoCar = []
 let esperaCli = 0
 let esperaOdo = 0
 let esperaCar = 0
+let turnos = []
 
 let specialist = parseInt(prompt("SELECIONE LA ESPECIALIDAD:\n1: CLINICO  \n2: ODONTOLOGO \n3: CARDIOLOGO \n4: SALIR "));
 
@@ -34,7 +35,7 @@ switch (CHOICE) {
 }
 
 function turno (turno,espera,tiempo) {
-    turno = ++turno;
+    turno += 1;
     espera = espera+tiempo;
     return alert(`su turno es el N° ${turno}, y el tiempo de espera estimado es de: ${espera} minutos`);
 }
