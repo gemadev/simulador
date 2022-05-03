@@ -1,10 +1,54 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="KEYWORDS" content="colores, fuentes, tipografias">
+    <meta name="viewport" content="width=device-width, initial-scale= 1, shrink-to-fit= no">
+    <meta name ="author" content="Gonzalo Martinez Adalid">
+    <meta name="name" description="turnera coderhouse">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/formulario.css">
+    <title>TURNERA CURSO CODERHOUSE</title>
     <title>Turnera - CoderHouse</title>
   </head>
   <body>
-  <script src="index.js">
-  </script>
+    <section class="container">
+      <div class="row my-5">
+      <div class="col-sm12 col-md-12 col-lg-12">
+      <form action="" method="POST" class="formulario">
+        <h3 class="display-5 text-success text-center">TURNOS MEDICOS</h3>
+        <div class="form-group">
+            <label for="">Nombre:</label>
+            <input type="text" placeholder="Introdusca su nombre completo" maxlength="20" id="nombre" name="nombre" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="">Especialidad:</label>
+            <select name="cargo" id="cargo" class="form-control">
+              <option value="Clinico">Clinico</option>
+              <option value="Odontologo">Odontologo</option>
+              <option value="Cardiologo">Cardiologo</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-success btn-block" >Enviar</button>
+          <a href="" class="btn btn-danger btn-block" >Volver</a>
+        </div>
+      </form>   
+      </div> 
+        <hr>
+        
+      </div>
+    </section>
+        <footer class="blockquote-footer text-center">
+            <address>
+                  <small class="font-weight-bold text-uppercase">&copy;todos los derechos reservados</small><br>
+                  <p class="lead">Gonzalo Martinez Adalid<br>Mar del plata - Argentina</p>
+            </address>
+        </footer>
+    <script src="index.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
   </body>
 </html>

@@ -4,7 +4,8 @@ let turnoCar = 0
 let esperaCli = 0
 let esperaOdo = 0
 let esperaCar = 0
-const specialist = parseInt(prompt("SELECIONE LA ESPECIALIDAD:\n1: CLINICO  \n2: ODONTOLOGO \n3: CARDIOLOGO \n4: SALIR "));
+
+let specialist = parseInt(prompt("SELECIONE LA ESPECIALIDAD:\n1: CLINICO  \n2: ODONTOLOGO \n3: CARDIOLOGO \n4: SALIR "));
 
 
 const OPTIONS = {
@@ -18,32 +19,22 @@ const CHOICE = OPTIONS[specialist];
 
 switch (CHOICE) {
     case 'CLINICO':
-        clinico();
+        turno(turnoCli,esperaCli,20);
         break;
     case 'ODONTOLOGO':
-        odontologo();
+        turno(turnoOdo,esperaOdo,50);
         break;
     case 'CARDIOLOGO':
-         cardiologo();
+         turno(turnoCar,esperaCar,40);
         break;  
+    case 'SALIR':
+        break;    
     default:
         alert('opcion invalida');          
 }
 
-function clinico () {
-    turnoCli = ++turnoCli;
-    esperaCli = esperaCli+20;
-    return alert(`su turno es el N° ${turnoCli}, y el tiempo de espera estimado es de: ${esperaCli} minutos`);
-}
-
-function odontologo () {
-    turnoOdo = ++turnoOdo;
-    esperaOdo = esperaOdo+60;
-    return alert(`su turno es el N° ${turnoOdo}, y el tiempo de espera estimado es de: ${esperaOdo} minutos`);
-}
-
-function cardiologo () {
-    turnoCar = ++turnoCar;
-    esperaCar = esperaCar+30;
-    return alert(`su turno es el N° ${turnoCar}, y el tiempo de espera estimado es de: ${esperaCar} minutos`);
+function turno (turno,espera,tiempo) {
+    turno = ++turno;
+    espera = espera+tiempo;
+    return alert(`su turno es el N° ${turno}, y el tiempo de espera estimado es de: ${espera} minutos`);
 }
