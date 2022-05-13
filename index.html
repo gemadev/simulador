@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale= 1, shrink-to-fit= no">
     <meta name ="author" content="Gonzalo Martinez Adalid">
     <meta name="name" description="turnera coderhouse">
-    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./css/formulario.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <title>TURNERA CURSO CODERHOUSE</title>
     <title>Turnera - CoderHouse</title>
   </head>
@@ -19,20 +20,21 @@
       <form action="" method="POST" class="formulario">
         <h3 class="display-5 text-success text-center">TURNOS MEDICOS</h3>
         <div class="form-group">
-            <label for="">Nombre:</label>
+            <label id="Nombre" for="">Nombre:</label>
             <input type="text" placeholder="Introdusca su nombre completo" maxlength="20" id="nombre" name="nombre" class="form-control">
         </div>
         <div class="form-group">
           <label for="">Especialidad:</label>
             <select name="cargo" id="cargo" class="form-control">
-              <option value="Clinico">Clinico</option>
-              <option value="Odontologo">Odontologo</option>
-              <option value="Cardiologo">Cardiologo</option>
+              <option id="Clinico" value="Clinico">Clinico</option>
+              <option id ="Odontologo" value="Odontologo">Odontologo</option>
+              <option id="Cardiologo" value="Cardiologo">Cardiologo</option>
             </select>
         </div>
         <div class="form-group">
-          <button type="submit" class="btn btn-success btn-block" >Enviar</button>
-          <a href="" class="btn btn-danger btn-block" >Volver</a>
+          <a href="turnos.html" target="_blank" button type="submit" class="btn btn-success btn-block"  id="Enviar">Enviar</a></button>
+          <a href="" class="btn btn-danger btn-block" id="Volver" >Volver</a>
+          <a href="turnos.html" class="btn btn-info btn-block" id="Listado" >Listado Turnos</a>
         </div>
       </form>   
       </div> 
