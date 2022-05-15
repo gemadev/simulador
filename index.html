@@ -17,7 +17,7 @@
     <section class="container">
       <div class="row my-5">
       <div class="col-sm12 col-md-12 col-lg-12">
-      <form action="" method="POST" class="formulario">
+      <form onsubmit="redirectToShiftList()" class="formulario">
         <h3 class="display-5 text-success text-center">TURNOS MEDICOS</h3>
         <div class="form-group">
             <label id="Nombre" for="">Nombre:</label>
@@ -32,7 +32,7 @@
             </select>
         </div>
         <div class="form-group">
-          <a href="turnos.html" target="_blank" button type="submit" class="btn btn-success btn-block"  id="Enviar">Enviar</a></button>
+          <input button type="submit" class="btn btn-success btn-block"  id="Enviar">Enviar</a></button>
           <a href="" class="btn btn-danger btn-block" id="Volver" >Volver</a>
           <a href="turnos.html" class="btn btn-info btn-block" id="Listado" >Listado Turnos</a>
         </div>
@@ -48,7 +48,9 @@
                   <p class="lead">Gonzalo Martinez Adalid<br>Mar del plata - Argentina</p>
             </address>
         </footer>
-    <script src="index.js"></script>
+        <script src="storage.js"></script>
+        <script src="index.js"></script>
     <script src="./js/bootstrap.min.js"></script>
   </body>
+
 </html>

@@ -13,7 +13,7 @@ let Odontologo = document.getElementById('Odontologo');
 let Cardiologo = document.getElementById('Cardiologo');
 let Turnos = document.getElementById('Turnos');
 
-let specialist = parseInt(prompt("SELECIONE LA ESPECIALIDAD:\n1: CLINICO  \n2: ODONTOLOGO \n3: CARDIOLOGO \n4:BUSCAR ESPECIALISTA \n5: SALIR "));
+/*let specialist = parseInt(prompt("SELECIONE LA ESPECIALIDAD:\n1: CLINICO  \n2: ODONTOLOGO \n3: CARDIOLOGO \n4:BUSCAR ESPECIALISTA \n5: SALIR "));*/
 
 const OPTIONS = {
     1 : 'CLINICO',
@@ -24,7 +24,7 @@ const OPTIONS = {
 }
 
 
-const CHOICE = OPTIONS[specialist];
+/*const CHOICE = OPTIONS[specialist];
 
 
 switch (CHOICE) {
@@ -46,7 +46,7 @@ switch (CHOICE) {
     default:
         alert('opcion invalida');          
 }
-
+*/
 function turno (Nombre,turno,espera,tiempo) {
     turno += 1;
     espera = espera+tiempo;
@@ -62,19 +62,13 @@ function buscar(medicos,listadoMedicos){
 
 }
 
-document.getElementById("Enviar")
-    .addEventListener("keyup", function(event) {
+function redirectToShiftList(){
     event.preventDefault();
-    if (event.keyCode === 13) {
-        document.getElementById("Enviar").click();
+    
+    const formulario = {
+        nombre: document.getElementById("nombre").value,
+        especialidad: document.getElementById("cargo").value
     }
-});
+    addToLocalStorage(formulario);
+}
 
-document.getElementById("Listado")
-    .addEventListener("keyup", function(event) {
-    event.preventDefault();
-    if (event.keyCode === 76) {
-        document.getElementById("Listado").click();
-    }
-});
- 

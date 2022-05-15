@@ -9,6 +9,22 @@
 <body>
     <h1>Listado turnos</h1>
     <p id="Turnos"></p>
-    <script src="index.js"></script>
+    <div id="div1">
+
+    </div>
 </body>
+<script src="storage.js"></script>
+<script src="index.js">
+</script>
+<script>
+    const listado = (JSON.parse(locaStorageExists()))
+    document.body.onload = addElement;
+    function addElement (){
+    let newDiv = document.createElement("div");
+    let newContent = document.createTextNode(JSON.stringify(listado));
+    newDiv.appendChild(newContent)
+    let currentDiv = document.getElementById("div1");
+    document.body.insertBefore(newDiv, currentDiv)
+}
+</script>
 </html>
