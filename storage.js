@@ -2,9 +2,9 @@ const storagePath = "sfhits"
 
 function locaStorageExists(){
     if (localStorage.getItem(storagePath) === null){
-        localStorage.setItem(storagePath, JSON.stringify([]))
+        localStorage.setItem(storagePath, JSON.stringify([]));
     }
-    return localStorage.getItem(storagePath)
+    return localStorage.getItem(storagePath);
 }
 
 function addToLocalStorage(turno){
@@ -12,7 +12,7 @@ function addToLocalStorage(turno){
     const storage = JSON.parse(stringStorage);
     storage.push(turno);
     console.log(storage);
-    localStorage.setItem(storagePath, JSON.stringify(storage))
+    localStorage.setItem(storagePath, JSON.stringify(storage));
 }
 
 
