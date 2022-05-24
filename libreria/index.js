@@ -1,9 +1,8 @@
-
 function redirectToShiftList(){
     event.preventDefault();
     const DateTime = luxon.DateTime;
     const time = DateTime.now();
-    
+
     const formulario = {
         nombre: document.getElementById("nombre").value,
         especialidad: document.getElementById("cargo").value,
@@ -16,12 +15,6 @@ function redirectToShiftList(){
 let borrar = document.getElementById("borrar");
 
 const borrarLista = () => {localStorage.clear()};
-
-/*borrar.addEventListener("click", () => {
-    result = window.prompt("Ingrese la contraseña");
-    result == "1234" ?( borrarLista(),  window.alert("CONTRASEÑA CORRETA, LISTA BORRADA")) 
-    : window.alert("CONTRASEÑA INCORRECTA");
-})*/
 
 borrar.addEventListener("click", () => {
     Swal.fire({
