@@ -17,11 +17,11 @@
     <section class="container">
       <div class="row my-5">
       <div class="col-sm12 col-md-12 col-lg-12">
-      <form onsubmit="redirectToShiftList()" class="formulario">
+      <form onsubmit="redirectToShiftList()" class="formulario" id="form">
         <h3 class="display-5 text-success text-center">TURNOS MEDICOS</h3>
         <div class="form-group">
             <label id="Nombre" for="">Nombre:</label>
-            <input type="text" placeholder="Introdusca su nombre completo" maxlength="20" id="nombre" name="nombre" class="form-control">
+            <input type="text" placeholder="Introdusca su nombre completo" maxlength="20" id="nombre" name="nombre" class="form-control" required>
         </div>
         <div class="form-group">
           <label for="">Especialidad:</label>
@@ -36,11 +36,18 @@
           <a href="" class="btn btn-danger btn-block" id="Volver">Limpiar</a>
           <a href="turnos.html" class="btn btn-info btn-block" id="Listado" >Listado Turnos</a>
           <a class="btn btn-warning btn-block" id="borrar" >Borrar Listado</a>
+          <a class="btn btn-primary btn-block" id="cargar" name="cargar" >Especialistas Disponibles</a>
         </div>
+        <input type="submit" id="button" value="Enviar Email" class="btn btn-outline-warning" >
       </form>   
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">emailjs.init('f1E6hWb46MbPyzKkz')</script>
       </div> 
         <hr>
         
+      </div>
+      <div id="resultado">
+
       </div>
     </section>
         <footer class="blockquote-footer text-center">
@@ -52,8 +59,10 @@
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
         <script src="index.js"></script>
+        <script src="turnos.js"></script>
         <script src="storage.js"></script>
     <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/email.js"></script>
   </body>
 
 </html>
